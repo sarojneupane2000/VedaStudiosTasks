@@ -9,6 +9,8 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Donation from '@/components/Donation';
 import { GetStaticProps } from 'next';
+import RaiseFund from '@/components/RaiseFund';
+import EventSchedule from '@/components/EventSchedule';
 
 interface Testimonial {
   fullName: string;
@@ -31,7 +33,9 @@ const Home = ({ testimonials }: HomeProps) => {
       <Hero />
       <About />
       <Services />
-      <Donation/>
+      <Donation />
+      <RaiseFund />
+      <EventSchedule/>
       <Testimonials testimonials={testimonials} />
       <Stats />
       <Contact />

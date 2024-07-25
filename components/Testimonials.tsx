@@ -1,39 +1,76 @@
+import React, { useState } from 'react';
+import { FaQuoteLeft, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 interface Testimonial {
-    fullName: string;
-    content: string;
-    imagePath: string;
+  fullName: string;
+  content: string;
+  imagePath: string;
+}
+
+interface TestimonialsProps {
+  testimonials: Testimonial[];
+}
+
+const Testimonials = ({ testimonials }: TestimonialsProps) => {
+  const [sliderRef, setSliderRef] = useState<Slider | null>(null);
+
+  if (!Array.isArray(testimonials) || testimonials.length === 0) {
+    return <p className="text-center p-8">No testimonials available.</p>;
   }
-  
-  interface TestimonialsProps {
-    testimonials: Testimonial[];
-  }
-  
-  const Testimonials = ({ testimonials }: TestimonialsProps) => {
-    console.log('Testimonials props:', testimonials); // Log received props for debugging
-  
-    if (!Array.isArray(testimonials) || testimonials.length === 0) {
-      return <p className="text-center p-8">No testimonials available.</p>;
-    }
-  
-    return (
-      <section className="p-8 bg-green-50">
-        <h2 className="text-2xl font-bold mb-4 text-center">Testimonials</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="p-4 bg-white rounded shadow">
-              <img
-                src={testimonial.imagePath}
-                alt={testimonial.fullName}
-                className="w-16 h-16 rounded-full mb-2 object-cover"
-              />
-              <p className="text-gray-700">{testimonial.content}</p>
-              <p className="mt-2 text-right text-gray-600">- {testimonial.fullName}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-    );
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
   };
-  
-  export default Testimonials;
-  
+
+  return (
+    <section className="p-8 bg-[#fdf8f6]">
+      <h2 className="text-xl font-bold mb-4 text-center">Check what our volunteers are saying</h2>
+      <p className="text-center text-gray-500 mb-8">
+        We advocate for vulnerable animals, providing safety while promoting responsible pet ownership. We uplift both animals and communities.
+      </p>
+      <div className="flex justify-center items-center relative">
+  <div className="relative w-full max-w-lg"> 
+    <Slider {...settings} ref={setSliderRef}>
+      {testimonials.map((testimonial, index) => (
+        <div key={index} className="flex justify-center">
+          <div className="max-w-lg p-8 bg-white rounded-lg shadow-md text-center">
+            <img
+              src={testimonial.imagePath}
+              alt={testimonial.fullName}
+              className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+            />
+            <FaQuoteLeft className="text-gray-300 text-4xl mx-auto mb-4" />
+            <p className="text-gray-700 mb-4">{testimonial.content}</p>
+            <p className="text-gray-900 font-bold">- {testimonial.fullName}</p>
+          </div>
+        </div>
+      ))}
+    </Slider>
+    <button
+      className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
+      onClick={() => sliderRef?.slickPrev()}
+    >
+      <FaArrowLeft />
+    </button>
+    <button
+      className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
+      onClick={() => sliderRef?.slickNext()}
+    >
+      <FaArrowRight />
+    </button>
+  </div>
+</div>
+
+    </section>
+  );
+};
+
+export default Testimonials;
