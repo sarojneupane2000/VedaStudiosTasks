@@ -26,7 +26,7 @@ const events = [
 
 const EventSchedule: React.FC = () => {
   return (
-    <div className="py-16 bg-[#fdf8f6] my-5">
+    <div className="py-16 my-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-base font-semibold tracking-wide text-[#8c5310]">
@@ -41,7 +41,7 @@ const EventSchedule: React.FC = () => {
         </div>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
           {events.map((event, index) => (
-            <div key={index} className="bg-[#fdf2ed] p-6 rounded-lg shadow-lg text-center">
+            <div key={index} className="p-6 rounded-lg shadow-lg text-center">
               <div className="text-2xl font-bold text-[#303030]">{event.date}</div>
               <div className="text-sm text-[#7f7f7f]">{event.month}</div>
               <h3 className="mt-2 text-lg font-bold text-[#303030]">{event.title}</h3>
@@ -51,7 +51,7 @@ const EventSchedule: React.FC = () => {
           ))}
         </div>
         <div className="text-center mt-8">
-          <button className="bg-[#8c5310] text-white py-2 px-4 rounded">
+          <button className="bg-blue-700 text-white py-2 px-4 rounded">
             View All
           </button>
         </div>
