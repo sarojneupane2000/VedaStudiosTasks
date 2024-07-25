@@ -4,10 +4,10 @@ const Donation: React.FC = () => {
   const [donation, setDonation] = useState<number>(10);
 
   return (
-    <div className="py-16 bg-gray-50 my-5">
+    <div className="py-16 bg-[#fdf8f6] my-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-base font-semibold tracking-wide text-indigo-600">
+          <h2 className="text-base font-semibold tracking-wide text-[#8c5310]">
             A HELP TO THOSE WHO NEED IT
           </h2>
           <h1 className="mt-2 text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
@@ -57,15 +57,15 @@ const Donation: React.FC = () => {
                   <button
                     key={amount}
                     onClick={() => setDonation(amount)}
-                    className={`px-4 py-2 border rounded-md ${
-                      donation === amount ? 'bg-indigo-600 text-white' : 'bg-gray-200'
+                    className={`px-4 py-2 border rounded-md  ${
+                      donation === amount ? 'bg-[#8c5310] text-white' : 'bg-gray-200'
                     }`}
                   >
                     ${amount}
                   </button>
                 ))}
               </div>
-              <button className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+              <button className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#8c5310] hover:bg-[#8c5310]">
                 Donate Now
               </button>
             </div>

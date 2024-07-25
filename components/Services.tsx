@@ -3,7 +3,7 @@ const Services = () => (
     <div className="py-16 bg-gray-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center">
-        <h2 className="text-base font-semibold tracking-wide text-indigo-600">
+        <h2 className="text-base font-semibold tracking-wide text-[#8c5310]">
           A HELP TO THOSE WHO NEED IT
         </h2>
         <h1 className="mt-2 text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
@@ -46,14 +46,14 @@ const Services = () => (
               <br />
               <span className="text-gray-600">RAISED: ${project.raised}</span>
             </div>
-            <button className="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+            <button className="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#8c5310] hover:bg-[#8c5310]">
               View Details
             </button>
           </div>
         ))}
       </div>
       <div className="text-center mt-10">
-        <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+        <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#8c5310] hover:bg-[#8c5310]">
           View All Cause
         </button>
       </div>

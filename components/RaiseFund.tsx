@@ -19,7 +19,7 @@ const RaiseFund: React.FC = () => {
           </div>
           <div className="mx-10">
             <div className="">
-              <h2 className="text-base font-semibold tracking-wide text-orange-400">
+              <h2 className="text-base font-semibold tracking-wide text-[#8c5310]">
                 A HELP TO THOSE WHO NEED IT
               </h2>
               <h1 className="mt-2 text-xl leading-9 font-extrabold text-gray-900 sm:text-3xl sm:leading-10">
@@ -66,7 +66,7 @@ const RaiseFund: React.FC = () => {
                     onClick={() => setDonation(amount)}
                     className={`px-3 py-1 text-sm border rounded-md ${
                       donation === amount
-                        ? "bg-indigo-600 text-white"
+                        ? "bg-[#8c5310] text-white"
                         : "bg-gray-200"
                     }`}
                   >
@@ -74,7 +74,7 @@ const RaiseFund: React.FC = () => {
                   </button>
                 ))}
               </div>
-              <button className="my-4 inline-flex items-center justify-center px-6 py-3 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+              <button className="my-4 inline-flex items-center justify-center px-6 py-3 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#8c5310] hover:bg-[#8c5310]">
                 Donate Now
               </button>
             </div>

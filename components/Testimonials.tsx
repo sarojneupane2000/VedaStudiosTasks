@@ -32,6 +32,9 @@ const Testimonials = ({ testimonials }: TestimonialsProps) => {
 
   return (
     <section className="p-8">
+        <h2 className="text-center font-semibold tracking-wide text-[#8c5310] my-5">
+                TESTIMONIALS
+              </h2>
       <h2 className="text-xl font-bold mb-4 text-center">Check what our volunteers are saying</h2>
       <p className="text-center text-gray-500 mb-8">
         We advocate for vulnerable animals, providing safety while promoting responsible pet ownership. We uplift both animals and communities.
