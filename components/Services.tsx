@@ -20,21 +20,21 @@ const Services = () => (
             raised: 800,
             title: "New chance for animals",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            image: "https://via.placeholder.com/300x200"
+            image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.IuCdcCTb7ilngCC-qW9dwQAAAA%26pid%3DApi&f=1&ipt=f3838b848ecb9b3501dcafd943b51fdc45d8a1c6bd9f398a2a99809c6742b510&ipo=images"
           },
           {
             goal: 1340,
             raised: 800,
             title: "Help the eco system",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            image: "https://via.placeholder.com/300x200"
+            image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.5ZZ0T5wxnUTkRoLNBOq6DwAAAA%26pid%3DApi&f=1&ipt=23c754b6d75f1148dd19810a877e44ca09827f5196ddb4f75335cb2b47fa6877&ipo=images"
           },
           {
             goal: 1340,
             raised: 800,
             title: "New Sustainability",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            image: "https://via.placeholder.com/300x200"
+            image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.wU3qMqCuUd_8QZwAyk82rAAAAA%26pid%3DApi&f=1&ipt=bcce8c1e52619e5df8146b8be840df953a31467aa55902c64e76acdfb8af7415&ipo=images"
           }
         ].map((project, index) => (
           <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
