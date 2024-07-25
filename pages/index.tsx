@@ -1,4 +1,3 @@
-// pages/index.tsx
 import Head from 'next/head';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
@@ -11,8 +10,9 @@ import Footer from '../components/Footer';
 import { GetStaticProps } from 'next';
 
 interface Testimonial {
-  message: string;
-  author: string;
+  fullName: string;
+  content: string;
+  imagePath: string;
 }
 
 interface HomeProps {
@@ -39,22 +39,40 @@ const Home = ({ testimonials }: HomeProps) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch('https://raw.githubusercontent.com/Himal-Marasini/frontend-task/main/testinomial_data.json');
-  let data: Testimonial[] = [];
-
+  const url = 'https://raw.githubusercontent.com/Himal-Marasini/frontend-task/main/testinomial_data.json';
+  
   try {
-    data = await res.json();
+    const res = await fetch(url);
+
+    // Log response status and data for debugging
+    console.log('API Response Status:', res.status);
+
+    if (!res.ok) {
+      throw new Error(`HTTP error! Status: ${res.status}`);
+    }
+    
+    const data = await res.json();
+    console.log('API Response Data:', data);
+
+    // Extract the testimonials array from the response
+    const testimonials: Testimonial[] = Array.isArray(data.testimonial) ? data.testimonial : [];
+
+    console.log('Fetched testimonials:', testimonials);
+    
+    return {
+      props: {
+        testimonials,
+      },
+    };
   } catch (error) {
     console.error('Error fetching testimonials:', error);
+    
+    return {
+      props: {
+        testimonials: [],
+      },
+    };
   }
-
-  const testimonials: Testimonial[] = Array.isArray(data) ? data : [];
-
-  return {
-    props: {
-      testimonials,
-    },
-  };
 };
 
 export default Home;
