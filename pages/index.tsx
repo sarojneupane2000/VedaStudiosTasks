@@ -37,8 +37,8 @@ const Home = ({ testimonials }: HomeProps) => {
       <RaiseFund />
       <EventSchedule/>
       <Testimonials testimonials={testimonials} />
-      <Stats />
       <Contact />
+      <Stats />
       <Footer />
     </div>
   );
