@@ -1,14 +1,14 @@
 import Image from 'next/image';
 
 const Hero = () => (
-  <section className="bg-green-300 p-8 flex items-center justify-between">
-    <div className="flex-1 pr-8">
+  <section className="bg-green-300 p-8 flex flex-col md:flex-row items-center justify-between">
+    <div className="flex-1 mb-8 md:mb-0 md:pr-8 text-center md:text-left">
       <h2 className="text-3xl font-bold mb-4">Saving lives of cats and dogs</h2>
       <p className="mb-4">Find your new best friend today.</p>
       <button className="bg-[#8c5310] text-white px-4 py-2 rounded hover:bg-[#8c5310]">Adopt Now</button>
     </div>
-    <div className="relative w-64 h-80 flex-shrink-0">
-      <Image src="/images/imgcat.png" alt="Cat image" layout="fill" objectFit="cover" />
+    <div className="relative w-full md:w-64 h-64 md:h-80 flex-shrink-0">
+      <Image src="/images/imgcat.png" alt="Cat image" layout="fill" objectFit="cover" className="rounded-md" />
     </div>
   </section>
 );

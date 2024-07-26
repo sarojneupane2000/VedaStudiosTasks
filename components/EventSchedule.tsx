@@ -39,7 +39,7 @@ const EventSchedule: React.FC = () => {
             We advocate for vulnerable animals, providing safety while promoting responsible pet ownership. We uplift both animals and communities.
           </p>
         </div>
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {events.map((event, index) => (
             <div key={index} className="bg-[#fdf2ed] p-6 rounded-lg shadow-lg text-center">
               <div className="text-2xl font-bold text-[#303030]">{event.date}</div>
