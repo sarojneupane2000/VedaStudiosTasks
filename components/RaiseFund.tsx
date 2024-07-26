@@ -1,4 +1,4 @@
-// components/RaiseFund.tsx
+
 import React, { useState } from "react";
 
 const RaiseFund: React.FC = () => {
@@ -13,7 +13,7 @@ const RaiseFund: React.FC = () => {
           <div className="flex-shrink-0 lg:w-1/3 mb-8 lg:mb-0">
             <img
               className="h-auto w-full object-cover rounded-lg"
-              src="https://via.placeholder.com/300x400"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.X65zIXMBVvpMAgjV1Q09yQAAAA%26pid%3DApi&f=1&ipt=6ce9a06c4fb1ba2989d95a1f541dd6f3a50ccb0de7532f477fb73df95e267a34&ipo=images"
               alt="Donation"
             />
           </div>

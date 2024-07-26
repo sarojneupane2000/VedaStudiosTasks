@@ -1,4 +1,4 @@
-// components/Header.tsx
+
 const Header = () => (
     <header className="bg-green-300 text-black p-5">
       <div className="container bg-white mx-auto flex justify-between items-center p-3 rounded-md">

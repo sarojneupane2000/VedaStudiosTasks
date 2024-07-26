@@ -5,7 +5,7 @@ import catImage from '../public/images/cat.png';
 const Contact = () => {
   return (
     <div className="bg-[#8C4A2E] text-white py-10 px-6 rounded-lg flex flex-col md:flex-row justify-between items-center mx-4 md:mx-20">
-      <div className="hidden md:block">
+      <div className="hidden md:block md:flex-shrink-0">
         <Image src={dogImage} alt="Dog" width={100} height={100} className="rounded-full" />
       </div>
       <div className="text-center flex-grow px-4">
@@ -16,7 +16,7 @@ const Contact = () => {
           <button className="bg-white text-[#8C4A2E] px-4 py-2 rounded">Volunteering opportunities →</button>
         </div>
       </div>
-      <div className="hidden md:block">
+      <div className="hidden md:block md:flex-shrink-0">
         <Image src={catImage} alt="Cat" width={100} height={100} className="rounded-full" />
       </div>
     </div>

@@ -17,7 +17,7 @@ const Donation: React.FC = () => {
             Your donation can save lives. Help us provide care and find loving homes for rescued animals. Every contribution counts. Donate now!
           </p>
         </div>
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {Array.from({ length: 3 }).map((_, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
               <img
@@ -52,12 +52,12 @@ const Donation: React.FC = () => {
                   placeholder="Enter donation amount"
                 />
               </div>
-              <div className="mb-4 flex justify-around">
+              <div className="mb-4 flex flex-wrap justify-center gap-2">
                 {[10, 25, 50, 100, 250].map((amount) => (
                   <button
                     key={amount}
                     onClick={() => setDonation(amount)}
-                    className={`px-4 py-2 border rounded-md  ${
+                    className={`px-4 py-2 border rounded-md ${
                       donation === amount ? 'bg-[#8c5310] text-white' : 'bg-gray-200'
                     }`}
                   >
